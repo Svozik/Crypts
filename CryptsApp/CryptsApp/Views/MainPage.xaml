@@ -12,12 +12,14 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10, 20, 0, 20" Spacing="20">
                             <Label Text="{Binding rank}" />
                             <Label Text="{Binding name}" />
                             <Label Text="{Binding symbol}"/>
                             <Label Text="{Binding price_usd}"/>
-                            <Label Text="{Binding percent_change_24h}"/>
+                            <Label Text="{Binding percent_change_24h}" TextColor="{Binding color}"/>
+                            <StackLayout IsVisible="{Binding}">
+                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
