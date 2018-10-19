@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CryptsApp.Models
 {
-    class Data
+    public class Data
     {
         public string id { get; set; }
         public string name { get; set; }
@@ -21,5 +21,6 @@ namespace CryptsApp.Models
         public string percent_change_24h { get; set; }
         public string percent_change_7d { get; set; }
         public string last_updated { get; set; }
+
     }
 }

@@ -4,11 +4,14 @@
              xmlns:local="clr-namespace:CryptsApp"
              x:Class="CryptsApp.MainPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.UseSafeArea="true" >
-
+             ios:Page.UseSafeArea="true"
+             Title="CryptApp">
+    
     <StackLayout>
         <Label Text="Hlavička" />
-        <ListView x:Name="Post_List" HasUnevenRows="True" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView x:Name="Post_List" HasUnevenRows="True" BackgroundColor="WhiteSmoke"
+                  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Post_List_ItemSelected"
+                  SeparatorColor="Blue">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -18,8 +21,6 @@
                             <Label Text="{Binding symbol}"/>
                             <Label Text="{Binding price_usd}"/>
                             <Label Text="{Binding percent_change_24h}" TextColor="{Binding color}"/>
-                            <StackLayout IsVisible="{Binding}">
-                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

@@ -1,4 +1,5 @@
 ﻿using CryptsApp.Models;
+using CryptsApp.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,6 @@ namespace CryptsApp
 
         public MainPage()
         {
-
             InitializeComponent();
 
         }
@@ -32,6 +32,21 @@ namespace CryptsApp
             Post_List.ItemsSource = _data;
             base.OnAppearing();
         }
+
+
+        private void Post_List_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+                return;
+
+            var crypts = e.SelectedItem as Data;
+            Navigation.PushAsync(new MainDetailPage(crypts));
+            Post_List.SelectedItem = null;
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
-
