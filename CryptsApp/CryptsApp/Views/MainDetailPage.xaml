@@ -4,21 +4,19 @@
              x:Class="CryptsApp.Views.MainDetailPage"
              Title="{Binding name}">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center"> 
-            <Label Text="{Binding rank}" />
-            <Label Text="{Binding name}" />
-            <Label Text="{Binding symbol}"/>
-            <Label Text="{Binding price_usd}"/>
-            <Label Text="{Binding price_btc}"/>
-            <Label Text="{Binding market_cap_usd}"/>
-            <Label Text="{Binding available_supply}"/>
-            <Label Text="{Binding max_supply}"/>
-            <Label Text="{Binding total_supply}"/>
-            <Label Text="{Binding max_supply}"/>
-            <Label Text="{Binding percent_change_1h}"/>
-            <Label Text="{Binding percent_change_24h}"/>
-            <Label Text="{Binding percent_change_7d}"/>
-            <Label Text="{Binding last_updated}"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="{Binding rank, StringFormat='Rank: {0:F0}'}" />
+            <Label Text="{Binding name, StringFormat='Name: {0:F0}'}" />
+            <Label Text="{Binding symbol, StringFormat='Symbol: {0:F0}'}"/>
+            <Label Text="{Binding price_usd, StringFormat='Price usd: {0:F0}'}"/>
+            <Label Text="{Binding price_btc, StringFormat='Price btc: {0:F0}'}"/>
+            <Label Text="{Binding market_cap_usd, StringFormat='Market cap usd: {0:F0}'}"/>
+            <Label Text="{Binding available_supply, StringFormat='Available supply: {0:F0}'}"/>
+            <Label Text="{Binding max_supply, StringFormat='Max supply: {0:F0}'}"/>
+            <Label Text="{Binding total_supply, StringFormat='Total supply: {0:F0}'}"/>
+            <Label Text="{Binding percent_change_1h, StringFormat='Percent change 1h: {0:F0}'}"/>
+            <Label Text="{Binding percent_change_24h, StringFormat='Percent change 24h: {0:F0}'}"/>
+            <Label Text="{Binding percent_change_7d, StringFormat='Percent change 7h: {0:F0}'}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

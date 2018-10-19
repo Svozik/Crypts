@@ -20,7 +20,7 @@
                             <Label Text="{Binding name}" />
                             <Label Text="{Binding symbol}"/>
                             <Label Text="{Binding price_usd}"/>
-                            <Label Text="{Binding percent_change_24h}" TextColor="{Binding color}"/>
+                            <Label Text="{Binding percent_change_24h}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
